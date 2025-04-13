@@ -1,0 +1,59 @@
+=> Web Development :-
+
+    1. Website.  (static)
+        ex : wiki.. etc 
+
+    2. WebApp.   (Dynamic)
+        ex : social Media.
+
+========================================================
+Job : 
+
+1. Front-end Developer : 
+    - HTML,CSS,JS,React,Bootstrap,Tailwind CSS etc...
+
+2. Back-end Developer : 
+    - JAVA,PYTHON,CPP,NodeJS, .net ,php etc...
+
+3. Full-stack Developer : 
+    - Front-end + Back-end + DB(Database)
+                                relational Database     (SQL)    (10%)
+                                (table Formate)
+                                non-relational Database (MongoDB)(90%)
+
+
+4. Software Engineer : 
+    - JAVA Developer
+    - PYTHON Developer
+
+
+5. MERN-stack Developer : 
+    M : MongoDB
+    E : ExpressJS
+    R : ReactJS     (Library+Framework)
+    N : NodeJS
+
+6. MEAN-stack Developer : 
+    M : MongoDB
+    E : ExpressJS
+    A : AngularJS  (Framework)
+    N : NodeJS
+
+7. Web Developer : 
+    
+======================================================== 
+=> JS:- Javascript 
+
+
+JS vs JAVA
+========================================================
+=> Brave vs Chrome 
+
+MO -> LS -> JS 
+=> IE   vs NESTCAPE 
+  JS       10:-Days  JS
+
+
+=> ECMA : ES
+
+    2015 : ES6   

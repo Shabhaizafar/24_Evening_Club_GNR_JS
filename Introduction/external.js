@@ -1,0 +1,1 @@
+document.write('My Name is XYZ..');
