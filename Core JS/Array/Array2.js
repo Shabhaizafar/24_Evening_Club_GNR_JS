@@ -92,8 +92,8 @@ var/let/const arrayname = [values...];
 // console.log(" ✂ 🔪:  ",arr.slice(2,5));
 
 
-
 /*
+arr[0]
 Create an array of 5 numbers and print it.
 
 Add two elements at the end of an array using .push() and print the new array.
