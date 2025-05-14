@@ -85,3 +85,50 @@
 // const c = 12;
 // c=13;
 // const c = 17;
+// var arr = [1,2,3,4];
+// console.log(arr);
+
+// reverse : 
+// console.log(arr.reverse());
+
+
+// var str  = "Prachi";
+// console.log(str.split('').reverse());
+
+// var arr = ['z','a','f','a','r'];
+
+// console.log(arr.reverse());
+
+
+// Join Method :   concat using ,
+
+// console.log(arr.join());
+// console.log(arr.join(''));
+// console.log(arr.join('|'));
+// console.log(arr.join(' '));
+// console.log(arr.join('O'));
+
+
+///////////////////////////////////
+
+// Wap to check given string is Peli or not ? 
+// str = "madam"
+// rev = "madam"
+// peli 
+
+// str = "raj"
+// rev = jar
+//  not peli
+
+// var mystr = "madam";
+// var rev = mystr.split('').reverse().join('');
+// (mystr=== rev) ? console.log("Peli") : console.log("not peli");
+
+
+//////////////////////////////////////
+var arr = [11,12,13,14];
+
+console.log(arr);
+
+arr.fill("Zafar");
+console.log(arr);
