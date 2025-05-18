@@ -23,3 +23,5 @@ function sayHello(){
 // 8. Callback Function 
 // 9. Recurssion Function 
 // 10. Getter Setter Function 
+
+// 10 * 4 = 40
