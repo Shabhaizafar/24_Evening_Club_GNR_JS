@@ -30,24 +30,24 @@
 // 3. without arg and with return type  
 //    1 . use 
 //    2 . store
-var somthing =  ()=>{
-    return "This is New Data";
-}
+// var somthing =  ()=>{
+//     return "This is New Data";
+// }
 
-console.log(somthing());
+// console.log(somthing());
 // var ans = somthing();
 // console.log(ans);
 //-----------------------------------------------------
 // 4. with arg and with return type  
 
-var result =  (marks)=> {
-    if(marks>=35)
-        return "Pass";
-    else 
-        return "Fail";
-}
+// var result =  (marks)=> {
+//     if(marks>=35)
+//         return "Pass";
+//     else 
+//         return "Fail";
+// }
 
-console.log(result(45));
+// console.log(result(45));
 
 // ====================================
 /*
