@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        form{
+            margin: 200px auto;
+            background-color: teal;
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            padding: 20px;
+            color: white;
+            gap: 10px;
+            font-family: calibri;
+        }
+        input{
+            background-color: rgb(24, 71, 71);
+            border: none;
+            border-radius: 4px;
+            font-size: 24px;
+            padding: 5px 10px;
+            font-family: calibri;
+        }
+        input[type='submit']{
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        Firstname : <input type="text" name="fname" class="fname">
+        Lastname : <input type="text" name="lname" class="lname">
+        <input type="submit" value="submit" class="btn">
+    </form>
+
+    <script src="dom8.js"></script>
+</body>
+</html>

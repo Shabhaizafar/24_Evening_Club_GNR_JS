@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+
+    </ul>    
+
+    <script>
+        // HOw to Access All the Data from Local Storage
+        // console.log(localStorage);
+        
+        
+        // How to Add New Data 
+        // localStorage.setItem("fname","Zafar");
+        // console.log(localStorage);
+
+        // How to remove Data 
+        // localStorage.removeItem('fname');
+        for (const key in localStorage) {
+            if(key.includes(1)){
+                var li = document.createElement('li');
+                    li.append(key, ":" ,localStorage[key]);
+                    document.querySelector('ul').appendChild(li);
+                }
+                
+        }
+
+    </script>
+</body>
+</html>

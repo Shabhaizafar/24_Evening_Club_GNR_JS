@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 400px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid teal;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" placeholder="Firstname">
+    <br>
+    <input type="text" placeholder="Lastname">
+    <br>
+    <button>Send</button>
+
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        </tr>
+    </table>
+
+    <script>
+        document.querySelector('button').onclick = function () {
+            var fname = document.querySelectorAll('input')[0].value;
+            var lname = document.querySelectorAll('input')[1].value;
+            var mystr = ['😀','😁','😂','🤣','😃','😄','😅','😆','😋','😎','😍','🤗','🤩','🤨','🙄','😑','😐','😶','😣','😮','😴','🥱','😛'];
+            // How to Create a New Element  : 
+            var tr = document.createElement('tr');
+
+            // How to Append Child Element using JS : 
+
+            for (let i = 0; i < 2; i++) {
+                var td = document.createElement('td');
+                td.append(mystr[parseInt(Math.random()*mystr.length-1)])
+                tr.appendChild(td);
+            }
+
+
+            document.querySelector('table').appendChild(tr);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
