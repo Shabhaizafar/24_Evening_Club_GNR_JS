@@ -6,17 +6,19 @@ const btn = document.querySelector('.btn');
 
 // btn.onclick = sayHello();
 
-var i = 0;
+
 
 btn.onclick = function (event){
     event.preventDefault();
     var fname = document.querySelector('.fname').value;
     var lname = document.querySelector('.lname').value;
-    i++;
-    localStorage.setItem(`fname${i}`,fname);
-    localStorage.setItem(`lname${i}`,lname);
+    localStorage.setItem('i',+localStorage.getItem('i')+1);
+    localStorage.setItem(`fname${localStorage.getItem('i')}`,fname);
+    localStorage.setItem(`lname${localStorage.getItem('i')}`,lname);
 
     // redirect
-    location.href = "localStorage.html";
+    // location.href = "localStorage.html";
+    location.href = "thanks.html";
+
     // console.log(fname,lname);
 }

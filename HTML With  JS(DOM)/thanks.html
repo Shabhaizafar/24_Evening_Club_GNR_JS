@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Data ADD Successfully</h1>
+    <ul>
+        
+    </ul>
+    <script>
+        for (const key in localStorage) {
+            if (key.includes(1) || key.includes(2) || key.includes(3) || key.includes(4) || key.includes(5) || key.includes(6) || key.includes(7) || key.includes(8) || key.includes(9)){
+                var li = document.createElement('li');
+                li.append(key, ":", localStorage[key]);
+                document.querySelector('ul').appendChild(li);
+            }
+        }     
+    </script>
 </body>
 </html>
