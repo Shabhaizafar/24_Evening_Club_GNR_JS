@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 9</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            padding: 10vh 10%;
+            background-color: black;
+        }
+        div{
+            width: 100%;
+            height: 80vh;
+            background-color: lightblue;
+            color: darkblue;
+            padding: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <script>
+        document.body.onkeypress = function(event){
+            document.querySelector('div').innerHTML = document.querySelector('div').innerHTML+event.key;
+        }
+
+    </script>
+</body>
+</html>
