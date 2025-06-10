@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            font-size: 24px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        div{
+            background-color: navy;
+            color: white;
+            font-size: 24px;
+            width: 500px;
+            height: 500px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <main>Lowercase : <span class="lwr">0</span></main>
+    </section>
+    <div>
+        
+    </div>
+
+    <script>
+            var lwr = 0;
+        document.body.onkeypress = function (event){
+            document.querySelector('div').innerHTML += event.key;
+            if( event.key>='a' &&  event.key<='z'){
+                lwr++;
+                document.querySelector('.lwr').innerHTML = lwr;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        table,td,th{
+            border: 1px solid blue;
+        }
+        td,th{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thanks For Submitting Data !!!</h1>
+    <table align="center">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script>
+        document.querySelectorAll('td')[0].innerHTML = localStorage.getItem('firstname');
+        
+        document.querySelectorAll('td')[1].innerHTML = localStorage.getItem('lastname');
+
+        obj = {
+            fname : "sdf"
+        }
+
+        obj.fname = "asd"
+    </script>
+</body>
+</html>
