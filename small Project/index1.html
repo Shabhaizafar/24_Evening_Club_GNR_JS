@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(27, 23, 23);
+            gap: 30px;
+        }
+        div{
+            background-color: lightblue;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 24px;
+            padding: 10px 50px;
+        }
+        button{
+            background-color: darkblue;
+            color: lightcyan;
+            font-family: calibri;
+            font-size: 24px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        0
+    </div>
+    <button>Click Here</button>
+
+    <script>
+        document.querySelector('button').onclick = function (){
+            document.querySelector('div').innerText = +document.querySelector('div').innerText + 1;
+        }
+    </script>
+</body>
+</html>
