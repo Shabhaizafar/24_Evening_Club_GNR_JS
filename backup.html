@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        section{
+            background-color: teal;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        div{
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            transition: all 1s;
+            font-size: 100px;
+        }
+        div:first-child{
+            background-color: darkslateblue;
+            left: 0%;
+        }
+        div:nth-child(2){
+            background-color: darkolivegreen;
+            left: 100%;
+        }
+        div:last-child{
+            background-color: darkgoldenrod;
+            left: 200%;
+        }
+        main{
+            position: absolute;
+            top: calc(50% - 25px);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        button{
+            background-color: lightslategrey;
+            border: none;
+            font-size: 56px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>Z</div>
+        <div>A</div>
+        <div>ZA</div>
+    </section>
+    <main>
+        <button>◀</button>
+        <button>▶</button>
+    </main>
+
+    <script src="slider.js"></script>
+</body>
+</html>
