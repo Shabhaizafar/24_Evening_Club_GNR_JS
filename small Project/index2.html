@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        section{
+            background-color: lightslategrey;
+            font-family: calibri;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            display: flex;
+            gap: 50px;
+        }
+        span{
+            display: block;
+            text-align: center;
+            padding-top: 20px;
+        }
+        div{
+            width: 250px;
+            height: 250px;
+            background-color: darkslategrey;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 200px;
+        }
+        article{
+            width: 20%;
+            position: absolute;
+            
+            bottom: 0px;
+            left: 40%;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        button{
+            font-size: 56px;
+            background-color: lightgrey;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(141, 141, 141);
+        }
+        p{
+            font-size: 32px;
+            position: absolute;
+            width: 150px;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            text-align: center;
+            color: black;
+            font-family: calibri;
+            top: 5%;
+            left: 5%;
+        }
+        header{
+            position: absolute;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 10px;
+            top: 5%;
+            right: 5%;
+            color: black;
+              font-size: 32px;
+            font-family: calibri;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <b>You</b><b>:</b><b class="you">0</b>
+        <b>Computer</b><b>:</b><b class="comp">0</b>
+    </header>
+    <p>🎲<b>:</b><b class="pass">10</b></p>
+    <section>
+        <main>
+            <aside>
+                <div class="u-choice"></div>
+                <span>You</span>
+            </aside>
+            <aside>
+                <div class="c-choice"></div>
+                <span>Computer</span>
+            </aside>
+        </main>
+    </section>
+
+    <article>
+        <button>✊</button>
+        <button>🖐️</button>
+        <button>✌️</button>
+    </article>
+
+    <script>
+        document.querySelector('article').onclick = function (event){
+            if(document.querySelector('.pass').innerHTML==0){
+                console.log("Game Over !!");
+                return;
+            }
+            var comp = parseInt(Math.random()*3);
+            document.querySelector('.u-choice').innerHTML = event.target.innerHTML;
+            if(comp==0){
+                document.querySelector('.c-choice').innerHTML = "✊";
+            }else if(comp==1){
+                document.querySelector('.c-choice').innerHTML = "🖐️";
+            }else if(comp==2){
+                document.querySelector('.c-choice').innerHTML = "✌️";
+            }
+
+            if(event.target.innerHTML=="✊" && document.querySelector('.c-choice').innerHTML== "✌️"){
+                document.querySelector('.you').innerHTML = +document.querySelector('.you').innerHTML + 1;
+                var myaudio = new Audio('luvvoice.com-20250618-eZVqOC.mp3');
+                myaudio.play();
+            }
+            else if(event.target.innerHTML=="✊" && document.querySelector('.c-choice').innerHTML== "🖐️"){
+                document.querySelector('.comp').innerHTML = +document.querySelector('.comp').innerHTML + 1;
+            }
+            else if(event.target.innerHTML=="🖐️" && document.querySelector('.c-choice').innerHTML== "✊"){
+                document.querySelector('.you').innerHTML = +document.querySelector('.you').innerHTML + 1;
+                var myaudio = new Audio('luvvoice.com-20250618-eZVqOC.mp3');
+                myaudio.play();
+            }
+            else if(event.target.innerHTML=="🖐️" && document.querySelector('.c-choice').innerHTML== "✌️"){
+                document.querySelector('.comp').innerHTML = +document.querySelector('.comp').innerHTML + 1;
+            }
+            else if(event.target.innerHTML=="✌️" && document.querySelector('.c-choice').innerHTML== "🖐️"){
+                document.querySelector('.you').innerHTML = +document.querySelector('.you').innerHTML + 1;
+                var myaudio = new Audio('luvvoice.com-20250618-eZVqOC.mp3');
+                myaudio.play();
+            }
+            else if(event.target.innerHTML=="✌️" && document.querySelector('.c-choice').innerHTML== "✊"){
+                document.querySelector('.comp').innerHTML = +document.querySelector('.comp').innerHTML + 1;
+            }else{
+                console.log("draw!!");
+            }
+
+            document.querySelector('.pass').innerHTML = +document.querySelector('.pass').innerHTML-1;
+        }
+    </script>
+</body>
+</html>

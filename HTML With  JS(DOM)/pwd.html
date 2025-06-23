@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+        form {
+            background-color: teal;
+            width: fit-content;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        div {
+            position: relative;
+        }
+
+        input[type="text"]{
+            padding: 5px 10px;
+            border: none;
+            font-size: 24px;
+            font-family: calibri;
+            border-radius: 4px;
+        }
+        aside{
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            display: flex;
+            color: gray;
+        }
+        .vis{
+            display: none;
+        }
+        aside span{
+            cursor: pointer;
+        }
+        aside span:hover{
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <div>
+            <input type="text" placeholder="password">
+            <aside>
+                <span class="material-symbols-outlined vis2">
+                    visibility_off
+                </span>
+                <span class="material-symbols-outlined vis">
+                    visibility
+                </span>
+            </aside>
+        </div>
+    </form>
+
+    <script src="dom5.js"></script>
+</body>
+
+</html>
