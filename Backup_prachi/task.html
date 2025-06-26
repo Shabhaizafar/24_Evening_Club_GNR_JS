@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todo App</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #e9eff1;
+      display: flex;
+      justify-content: center;
+      padding-top: 60px;
+    }
+
+    .todo-box {
+      background-color: white;
+      padding: 25px;
+      width: 420px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .todo-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .input-group input {
+      flex: 1;
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .input-group button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      background-color: #4a90e2;
+      color: white;
+      cursor: pointer;
+    }
+
+    .task-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .task-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f6f8fa;
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
+
+    .task-item span {
+      flex: 1;
+      color: #333;
+    }
+
+    .btns button {
+      margin-left: 6px;
+      padding: 6px 10px;
+      font-size: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .btn-done { background-color: #28a745; color: white; }
+    .btn-edit { background-color: #ffc107; color: #333; }
+    .btn-remove { background-color: #dc3545; color: white; }
+  </style>
+</head>
+<body>
+
+  <div class="todo-box">
+    <h2>📝 New Todo</h2>
+
+    <div class="input-group">
+      <input type="text" placeholder="Enter task..." />
+      <button>Add</button>
+    </div>
+
+    <div class="task-list">
+      <div class="task-item">
+        <span>Finish homework</span>
+        <div class="btns">
+          <button class="btn-done">Done</button>
+          <button class="btn-edit">Edit</button>
+          <button class="btn-remove">Remove</button>
+        </div>
+      </div>
+
+      <div class="task-item">
+        <span>Call John</span>
+        <div class="btns">
+          <button class="btn-done">Done</button>
+          <button class="btn-edit">Edit</button>
+          <button class="btn-remove">Remove</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

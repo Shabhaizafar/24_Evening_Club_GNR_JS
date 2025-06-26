@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            list-style-type: none;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            padding-top: 50px;
+        }
+
+        .todo-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-section {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .input-section input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .input-section button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .todo-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .todo-text {
+            flex: 1;
+        }
+
+        .btn-group button {
+            margin-left: 5px;
+            padding: 6px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .btn-done {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-edit {
+            background-color: #ffc107;
+            color: black;
+        }
+
+        .btn-remove {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="todo-container">
+        <h2>My Todo List</h2>
+
+        <div class="input-section">
+            <input type="text" placeholder="Enter a task..." />
+            <button class="add">Add</button>
+        </div>
+
+        <!-- Static Task Example -->
+        <ul>
+            <li class="todo-item">
+                <div class="todo-text">Learn HTML</div>
+                <div class="btn-group">
+                    <button class="btn-done">Done</button>
+                    <button class="btn-edit">Edit</button>
+                    <button class="btn-remove">Remove</button>
+                </div>
+            </li>
+
+            <li class="todo-item">
+                <div class="todo-text">Practice CSS</div>
+                <div class="btn-group">
+                    <button class="btn-done">Done</button>
+                    <button class="btn-edit">Edit</button>
+                    <button class="btn-remove">Remove</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="All.js"></script>
+</body>
+
+</html>

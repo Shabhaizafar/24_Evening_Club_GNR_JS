@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Field with Theme Toggle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-color: #f4f4f4;
+      --form-color: white;
+      --text-color: #111;
+      --input-bg: #f0f0f0;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark {
+      --bg-color: #111;
+      --form-color: #222;
+      --text-color: #fff;
+      --input-bg: #333;
+      --shadow: rgba(255, 255, 255, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: var(--bg-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 0.3s;
+    }
+
+    .form-container {
+      background: var(--form-color);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px var(--shadow);
+      transition: background 0.3s, color 0.3s;
+      position: relative;
+      width: 300px;
+    }
+
+    h2 {
+      color: var(--text-color);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 40px 12px 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      background: var(--input-bg);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .toggle-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: gray;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .toggle-icon:hover {
+      color: var(--text-color);
+    }
+
+    .theme-switch {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      color: var(--text-color);
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <button class="theme-switch" title="Toggle Dark/Light">
+      <span class="material-symbols-outlined">dark_mode</span>
+    </button>
+
+    <h2>Enter Password</h2>
+    <div class="input-group">
+      <input type="text" id="password" placeholder="Password" />
+      <span class="material-symbols-outlined toggle-icon" id="toggleEye">visibility_off</span>
+    </div>
+  </div>
+
+  <script>
+    const passwordInput = document.getElementById("password");
+    const eyeIcon = document.getElementById("toggleEye");
+    const themeBtn = document.querySelector(".theme-switch");
+    const body = document.body;
+
+    let actualPassword = "";
+    let maskedPassword = "";
+
+    passwordInput.addEventListener("keypress", (e) => {
+      actualPassword += e.key;
+      maskedPassword = "●".repeat(actualPassword.length);
+    });
+
+    passwordInput.addEventListener("keyup", () => {
+      passwordInput.value = maskedPassword;
+    });
+
+    eyeIcon.addEventListener("click", () => {
+      if (eyeIcon.innerText === "visibility_off") {
+        eyeIcon.innerText = "visibility";
+        passwordInput.value = actualPassword;
+      } else {
+        eyeIcon.innerText = "visibility_off";
+        passwordInput.value = maskedPassword;
+      }
+    });
+
+    themeBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      themeBtn.innerHTML = `<span class="material-symbols-outlined">${
+        body.classList.contains("dark") ? "light_mode" : "dark_mode"
+      }</span>`;
+    });
+  </script>
+</body>
+</html>
