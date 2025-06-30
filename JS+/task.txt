@@ -1,0 +1,16 @@
+
+
+1. **Using Object Literal:**
+   Create an object named `car` with properties `brand`, `model`, and `year`. Print all properties using `console.log()`.
+
+2. **Using Object Constructor:**
+   Create an object `student` using `new Object()`, and add `name`, `grade`, and `rollNo` properties using dot and bracket notation.
+
+3. **Using `Object.create()`:**
+   Create an object `animal` with a property `type: "Mammal"`, then create another object `dog` that inherits from `animal` and adds a `breed` property.
+
+4. **Using `Object.assign()`:**
+   Use `Object.assign()` to merge two objects: `obj1 = {a: 10}` and `obj2 = {b: 20}` into a new object. Print the result.
+
+5. **Function to Create Multiple Objects:**
+   Write a function `createEmployee(name, id)` that returns an employee object with those properties. Use it to create and print two different employee objects.
