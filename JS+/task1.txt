@@ -1,0 +1,99 @@
+✅ **Steps to Create an Employee Factory Function**
+
+ 1. **Define the Function**
+
+* Use the `function` keyword to define a function named `Employee` with parameters:
+
+  * `empId`
+  * `name`
+  * `position`
+  * `salary`
+
+------------------
+function Employee(empId, name, position, salary) {
+------------------
+
+
+
+ 2. **Create an Empty Object**
+
+* Inside the function, create an empty object to store employee details.
+
+------------------
+    var employee = {};
+------------------
+
+
+
+ 3. **Assign Properties**
+
+* Assign the function parameters to the `employee` object’s properties.
+
+------------------
+    employee.empId = empId;
+    employee.name = name;
+    employee.position = position;
+    employee.salary = salary;
+------------------
+
+
+
+ 4. **Add Method: `details()`**
+
+* Create a method that logs employee ID, name, and position.
+
+------------------
+    employee.details = function () {
+        console.log(`ID: ${employee.empId}, Name: ${employee.name}, Position: ${employee.position}`);
+    }
+------------------
+
+
+
+ 5. **Add Method: `isHighEarner()`**
+
+* Create a method that checks if the salary is 50,000 or more.
+
+------------------
+    employee.isHighEarner = function () {
+        (employee.salary >= 50000) ? console.log("High Earner") : console.log("Low Earner");
+    }
+------------------
+
+
+
+ 6. **Return the Object**
+
+* Return the final `employee` object from the function.
+
+------------------
+    return employee;
+}
+------------------
+
+
+
+ 7. **Create Employee Objects**
+
+* Use the `Employee` function to create multiple employees.
+
+------------------
+var e1 = Employee(101, "Amit Kumar", "Developer", 60000);
+var e2 = Employee(102, "Neha Verma", "Intern", 20000);
+------------------
+
+
+
+ 8. **Use the Methods**
+
+* Call methods like `details()` and `isHighEarner()` on the employee objects.
+
+------------------
+e1.details();          // Output: ID: 101, Name: Amit Kumar, Position: Developer
+e1.isHighEarner();     // Output: High Earner
+
+e2.details();          // Output: ID: 102, Name: Neha Verma, Position: Intern
+e2.isHighEarner();     // Output: Low Earner
+------------------
+
+
