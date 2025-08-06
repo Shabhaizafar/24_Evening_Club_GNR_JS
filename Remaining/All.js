@@ -239,30 +239,18 @@ console.log(a);
 
 
 
-fetch("https://jsonplaceholder.typicode.com/users").then((data)=>{
-    data.json().then((data2)=>{
-        console.log(data2);
-    });
-});
+// fetch("https://jsonplaceholder.typicode.com/users").then((data)=>{
+//     data.json().then((data2)=>{
+//         console.log(data2);
+//     });
+// });
 
 // https://official-joke-api.appspot.com/jokes/random
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// ======================================================
-
-//    - Intro to Ajax, HTTP Request.
+// =======================================================
+//    - Intro to Ajax, HTTP Request : 
 //    - XHR requests.
 //    - Error handling in XHR requests.
 //    - XHR request Chaining.
@@ -271,6 +259,28 @@ fetch("https://jsonplaceholder.typicode.com/users").then((data)=>{
 
 
 
+// var xmr = new XMLHttpRequest();
 
 
+// xmr.open("GET","https://official-joke-api.appspot.com/jokes/random");
 
+
+// xmr.onload = function(data){
+//     // console.log(data);
+//     // console.log(data.target);
+//     console.log(data.target.response);
+// }
+
+// xmr.onloadstart = function(){
+//     console.log("On Load Start !!");
+// }
+
+// xmr.onloadend = function(){
+//     console.log("On Load End !!");
+// }
+
+// xmr.onprogress = function(){
+//     console.log("On progress !!");
+// }
+
+// xmr.send();
